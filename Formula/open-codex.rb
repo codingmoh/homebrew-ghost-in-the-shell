@@ -8,6 +8,7 @@ class OpenCodex < Formula
   license "MIT"
 
   depends_on "python@3.11"
+  depends_on "llama.cpp"
 
   def install
     virtualenv_install_with_resources
