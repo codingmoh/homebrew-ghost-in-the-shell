@@ -9,7 +9,10 @@ class OpenCodex < Formula
 
   depends_on "python@3.11"
   depends_on "llama.cpp"
+  depends_on "cmake" => :build     # <─ NEW
+  depends_on "ninja" => :build     # <─ NEW
 
+  # ↙ generated with `brew update-python-resources`
   resource "certifi" do
     url "https://files.pythonhosted.org/packages/1c/ab/c9f1e32b7b1bf505bf26f0ef697775960db7932abeb7b516de930ba2705f/certifi-2025.1.31.tar.gz"
     sha256 "3d5da6925056f6f18f119200434a4780a94263f10d1c21d032a6f6b2baa20651"
@@ -109,9 +112,9 @@ class OpenCodex < Formula
     url "https://files.pythonhosted.org/packages/6c/63/53559446a878410fc5a5974feb13d31d78d752eb18aeba59c7fef1af7598/wcwidth-0.2.13.tar.gz"
     sha256 "72ea0c06399eb286d978fdedb6923a9eb47e1c486ce63e9b4e64fc18303972b5"
   end
-
+ 
   def install
-    virtualenv_install_with_resources
+    virtualenv_install_with_resources   # ← the only line you need here
   end
 
   test do
