@@ -3,8 +3,8 @@ class OpenCodex < Formula
 
   desc "AI-powered terminal assistant that converts natural language to shell commands"
   homepage "https://github.com/codingmoh/open-codex"
-  url "https://files.pythonhosted.org/packages/9b/99/739b4508c2fd97b6aac22eeb0aee37759b8a19c2254b3ce7570b21d2908d/open_codex-0.1.9.tar.gz"
-  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  url "https://files.pythonhosted.org/packages/f3/7a/129980c4f78a2cbc685f555d65732abb4aaa0cc1a9d39b17c49db9a6c49c/open_codex-0.1.11.tar.gz"
+  sha256 "b65b00c8a880e1b930f5d0feca267cfbb97759efd1316c00814ab4312a4bef80"
   license "MIT"
 
   depends_on "python@3.11"
