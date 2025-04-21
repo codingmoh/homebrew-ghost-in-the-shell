@@ -17,6 +17,6 @@ class OpenCodex < Formula
   end
 
   test do
-    system "\#{bin}/open-codex", "--help"
+    system "#{bin}/open-codex", "--help"
   end
 end
