@@ -1,18 +1,19 @@
-class GhostInTheShell < Formula
-    include Language::Python::Virtualenv
-  
-    desc "AI-powered terminal assistant that converts natural language to shell commands."
-    homepage "https://github.com/codingmoh/ghost_in_the_shell"
-    url "https://files.pythonhosted.org/packages/c5/de/fb89ae31371040577587ed30c323f5ee1d961db425896c84d87034f79bdb/ghost_in_the_shell-0.1.7.tar.gz"
-    sha256 "dedb2eb96f827cf2c1eb99377f6dbbad8a87c725375db9c87e0c257f31850a03"
-    license "MIT"
-    depends_on "python@3.11"
-  
-    def install
-      virtualenv_install_with_resources
-    end
-  
-    test do
-      system "#{bin}/ai", "--help"
-    end
+class OpenCodex < Formula
+  include Language::Python::Virtualenv
+
+  desc "AI-powered terminal assistant that converts natural language to shell commands"
+  homepage "https://github.com/codingmoh/open-codex"
+  url "https://files.pythonhosted.org/packages/source/o/open-codex/open-codex-0.1.9.tar.gz"
+  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  license "MIT"
+
+  depends_on "python@3.11"
+
+  def install
+    virtualenv_install_with_resources
   end
+
+  test do
+    system "\#{bin}/open-codex", "--help"
+  end
+end
