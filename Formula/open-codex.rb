@@ -12,7 +12,6 @@ class OpenCodex < Formula
 
   def install
     venv = virtualenv_create(libexec, "python3.11")
-    venv.pip_install buildpath
     venv.pip_install_and_link buildpath
   end
 
