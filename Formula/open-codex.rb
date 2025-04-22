@@ -2,7 +2,7 @@ class OpenCodex < Formula
   desc "CLI tool to generate shell commands from natural language"
   homepage "https://github.com/codingmoh/open-codex"
   url "https://github.com/codingmoh/open-codex/releases/download/0.1.15/open-codex-macos.zip"
-  sha256 "cbd1f78e2af5477f0bb216419cd44f933a7e1aaa5c959fb74dcc1021f3cca1d2"
+  sha256 "88e656c1f56c2e191711cc459a1ba5d6c8544fd80fd65c764e035a51b1143403"
   license "MIT"
 
   def install
