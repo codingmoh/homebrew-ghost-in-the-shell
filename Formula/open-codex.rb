@@ -6,8 +6,10 @@ class OpenCodex < Formula
   license  "MIT"
 
   def install
+    # ▸ der ganze Ordner open-codex/ kommt ins Cellar-Prefix
     prefix.install "open-codex"
 
+    # ▸ schlanker Symlink, damit User einfach `open-codex` tippen kann
     bin.install_symlink prefix/"open-codex/open-codex"
   end
 end
