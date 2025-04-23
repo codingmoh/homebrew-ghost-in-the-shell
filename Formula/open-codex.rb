@@ -6,7 +6,7 @@ class OpenCodex < Formula
   license "MIT"
 
   def install
-    bin.install "open-codex/open-codex"
+    bin.install "open-codex"
   end
 
   def post_install
