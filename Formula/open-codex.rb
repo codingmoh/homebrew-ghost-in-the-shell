@@ -6,10 +6,13 @@ class OpenCodex < Formula
   license  "MIT"
 
   def install
-    # Installiere den gesamten Ordner inkl. _internal, Python usw.
-    prefix.install "open-codex"
+    # Installiere das ganze Verzeichnis in libexec
+    libexec.install Dir["*"]    # Erstelle Wrapper-Skript, das das Executable von libexec startet
+    (bin/"open-codex").write <<~EOS
+      #!/bin/bash
+      exec "/opt/homebrew/opt/open-codex/libexec/open-codex" "$@"
+      EOS
 
-    # Erstelle einen Symlink zu deiner CLI-Binary
-    bin.install_symlink prefix/"open-codex/open-codex"
+    chmod "+x", bin/"open-codex"
   end
 end
