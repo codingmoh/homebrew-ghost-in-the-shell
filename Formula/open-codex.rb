@@ -1,13 +1,12 @@
 class OpenCodex < Formula
   desc     "CLI tool to generate shell commands from natural language"
   homepage "https://github.com/codingmoh/open-codex"
-  url      "https://github.com/codingmoh/open-codex/releases/download/0.1.17/open-codex-macos.zip"
-  sha256   "62852ce7464c630f13d067de964fb180131d399186b109878998ef6096e140a0"
+  url      "https://github.com/codingmoh/open-codex/releases/download/0.1.18/open-codex-macos.zip"
+  sha256   "dfaed930e1acab739925d102ba4fd9373e70b2391bbd3910e95faa04f68ba458"
   license  "MIT"
 
   def install
-    # Installiere das ganze Verzeichnis in libexec
-    libexec.install Dir["*"]    # Erstelle Wrapper-Skript, das das Executable von libexec startet
+    libexec.install Dir["*"]  
     (bin/"open-codex").write <<~EOS
       #!/bin/bash
       exec "/opt/homebrew/opt/open-codex/libexec/open-codex" "$@"
